@@ -237,9 +237,34 @@ cargo run -- protocol-report --size-gb 120 --shard-mb 64 --replicas 7 --node-cou
 cargo run -- serve --state ./state.snapshot --addr 127.0.0.1:8091
 ```
 
+P2P 共识模式（升级版，推荐）：
+
+```bash
+# 节点 A
+cargo run -- serve --state ./state.snapshot --addr 0.0.0.0:8091 --node-id node-a --peers http://<NODE_B_IP>:8091,http://<NODE_C_IP>:8091
+
+# 节点 B
+cargo run -- serve --state ./state.snapshot --addr 0.0.0.0:8091 --node-id node-b --peers http://<NODE_A_IP>:8091,http://<NODE_C_IP>:8091
+
+# 节点 C
+cargo run -- serve --state ./state.snapshot --addr 0.0.0.0:8091 --node-id node-c --peers http://<NODE_A_IP>:8091,http://<NODE_B_IP>:8091
+```
+
+写请求（上传）已升级为“多数投票通过后提交”：
+
+- 节点先向 peers 发起 `/api/p2p/vote`。
+- 票数达到多数（N/2+1）才会本地提交。
+- 提交后广播 `/api/p2p/commit`，其余节点应用该快照。
+- 若票数不足，请求返回错误，避免单点写入导致分叉。
+
 可用接口：
 
 - `GET /api/health`
+- `GET /api/p2p/state`
+- `GET /api/p2p/snapshot`
+- `GET /api/p2p/consensus`
+- `POST /api/p2p/vote`
+- `POST /api/p2p/commit`
 - `GET /api/chain/blocks`
 - `POST /api/data/upload`
 - `POST /api/data/upload/file`
