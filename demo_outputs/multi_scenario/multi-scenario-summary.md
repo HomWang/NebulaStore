@@ -1,0 +1,14 @@
+| scenario | size_gb | max_monthly_budget_usd | strategy | champion_template | composite_score | predicted_p95_ms | predicted_monthly_cost_usd | reliability_score | risk_level |
+| --- | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: | --- |
+| size120_budget3000 | 120 | 3000 | balanced | ai-inference | 74.15 | 1060 | 2862.0 | 87 | low |
+| size120_budget3000 | 120 | 3000 | latency-first | ai-inference | 74.15 | 1060 | 2862.0 | 87 | low |
+| size120_budget3000 | 120 | 3000 | cost-first | ai-inference | 74.15 | 1060 | 2862.0 | 87 | low |
+| size120_budget3000 | 120 | 3000 | reliability-first | ai-inference | 74.15 | 1060 | 2862.0 | 87 | low |
+| size1024_budget18000 | 1024 | 18000 | balanced | ai-inference | 70.1 | 980 | 8104.0 | 78 | medium |
+| size1024_budget18000 | 1024 | 18000 | latency-first | ai-inference | 70.1 | 980 | 8104.0 | 78 | medium |
+| size1024_budget18000 | 1024 | 18000 | cost-first | ai-inference | 70.1 | 980 | 8104.0 | 78 | medium |
+| size1024_budget18000 | 1024 | 18000 | reliability-first | ai-inference | 70.1 | 980 | 8104.0 | 78 | medium |
+| size10240_budget150000 | 10240 | 150000 | balanced | ai-inference | 70.1 | 980 | 59714.0 | 78 | medium |
+| size10240_budget150000 | 10240 | 150000 | latency-first | ai-inference | 70.1 | 980 | 59714.0 | 78 | medium |
+| size10240_budget150000 | 10240 | 150000 | cost-first | ai-inference | 70.1 | 980 | 59714.0 | 78 | medium |
+| size10240_budget150000 | 10240 | 150000 | reliability-first | ai-inference | 70.1 | 980 | 59714.0 | 78 | medium |

@@ -1,0 +1,33 @@
+{
+  "protocol": "NebulaStore",
+  "size_gb": 120.0,
+  "strategy": "reliability-first",
+  "ranking": [
+    {
+      "template": "ai-inference",
+      "composite_score": 74.15,
+      "predicted_p95_ms": 1060,
+      "predicted_monthly_cost_usd": 2862.0,
+      "reliability_score": 87,
+      "risk_level": "low"
+    },
+    {
+      "template": "web3-frontend",
+      "composite_score": 74.15,
+      "predicted_p95_ms": 1060,
+      "predicted_monthly_cost_usd": 2862.0,
+      "reliability_score": 87,
+      "risk_level": "low"
+    },
+    {
+      "template": "archive",
+      "composite_score": 59.15,
+      "predicted_p95_ms": 1220,
+      "predicted_monthly_cost_usd": 2502.0,
+      "reliability_score": 87,
+      "risk_level": "low"
+    }
+  ],
+  "champion_template": "ai-inference",
+  "champion_reason": "ai-inference 在当前约束下综合得分最高（74.15），兼顾时延、成本和可靠性。"
+}

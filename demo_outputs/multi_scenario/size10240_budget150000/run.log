@@ -1,0 +1,11 @@
+NebulaStore champion strategy demo
+size_gb=10240, max_monthly_budget_usd=150000
+
+balanced -> ai-inference
+latency-first -> ai-inference
+cost-first -> ai-inference
+reliability-first -> ai-inference
+
+full reports saved in: ./demo_outputs/multi_scenario/size10240_budget150000
+summary csv: ./demo_outputs/multi_scenario/size10240_budget150000/champion-summary.csv
+summary markdown: ./demo_outputs/multi_scenario/size10240_budget150000/champion-summary.md

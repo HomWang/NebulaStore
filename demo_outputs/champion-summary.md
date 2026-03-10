@@ -1,0 +1,6 @@
+| strategy | champion_template | composite_score | predicted_p95_ms | predicted_monthly_cost_usd | reliability_score | risk_level |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| balanced | ai-inference | 74.15 | 1060 | 2862.0 | 87 | low |
+| latency-first | ai-inference | 74.15 | 1060 | 2862.0 | 87 | low |
+| cost-first | ai-inference | 74.15 | 1060 | 2862.0 | 87 | low |
+| reliability-first | ai-inference | 74.15 | 1060 | 2862.0 | 87 | low |
